@@ -1,10 +1,4 @@
-<script setup lang="ts">
-console.log(
-  getComputedStyle(document.documentElement).getPropertyValue(
-    "--lh-success-color"
-  )
-);
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div>
@@ -12,8 +6,4 @@ console.log(
   </div>
 </template>
 
-<style scoped>
-.test {
-  color: var(--lh-primary-color);
-}
-</style>
+<style scoped></style>

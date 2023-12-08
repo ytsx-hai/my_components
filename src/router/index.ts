@@ -5,8 +5,8 @@
  * @LastEditTime: 2023-12-08 17:38:42
  * @Description:
  */
-import lhButton from "../components/lh-button.vue";
-import lhAlert from "../components/lh-alert.vue";
+import lhButton from "@/components/lh-button.vue";
+import lhAlert from "@/components/lh-alert.vue";
 
 const routes = [
   { path: "/lhButton", component: lhButton },
