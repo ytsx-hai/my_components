@@ -17,14 +17,39 @@
             - "packages/**" #分包管理
     +8、进入到packages中的各个文件执行pnpm init初始化一个package.json文件
     +9、自己的工作空间中可能存在相互依赖的情况，所以要将它们安装到根目录下
-        退出到根目录，执行pnpm install @lh/components -w命令，有多少个分包
+        退出到根目录，执行pnpm install @lh-vui/components -w命令，有多少个分包
         分包执行各分包
         执行完后查看根目录的package.json配置文件依赖是否装上
         "dependencies": {
-            "@lh/components": "workspace:*",
-            "@lh/theme-chalk": "workspace:*",
-            "@lh/utils": "workspace:*",
+            "@lh-vui/components": "workspace:*",
+            "@lh-vui/theme-chalk": "workspace:*",
+            "@lh-vui/utils": "workspace:*",
             "typescript": "^5.3.3",
             "vue": "^3.3.11"
         }
         到此分包管理已初步完成。
+
+## 创建组件执行的 vue 环境目录
+
+    pnpm create vite play --template vue-ts
+
+## 安装给组件命名的插件
+
+    pnpm install unplugin-vue-define-options -D
+
+    在vite.config.ts中配置
+
+    import unpluginDefineOptions from "unplugin-vue-define-options/vite"
+
+    export default defineConfig({
+        plugins: [vue(), unpluginDefineOptions()],
+    })
+
+    给组件起名字
+        defineOptions({
+            name: "lh-icon"
+        })
+
+### 介绍一个常用图标库 https://xicons.org/#/
+
+    pnpm i @vicons/ionicons5
