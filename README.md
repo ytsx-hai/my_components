@@ -53,3 +53,9 @@
 ### 介绍一个常用图标库 https://xicons.org/#/
 
     pnpm i @vicons/ionicons5
+
+## eslint 校验规则处理
+
+    npx eslint --init
+
+    pnpm i @vue/eslint-config-typescript -D -w
