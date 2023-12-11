@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   line-height: 1;
-  height: 32px;
+  height: var(--lh-default-height);
   white-space: nowrap;
   cursor: pointer;
   color: var(--lh-button-text-color);
@@ -25,11 +25,19 @@
   padding: 8px 15px;
   font-size: var(--lh-font-size-base);
   border-radius: var(--lh-border-radius-base);
+  :hover {
+    outline: none;
+  }
   @include m(default) {
     &:hover {
       opacity: 0.8;
       border: 1px solid var(--lh-primary-color);
       color: var(--lh-primary-color);
+    }
+    @include when(circle) {
+      height: var(--lh-default-height);
+      width: var(--lh-default-height);
+      border-radius: 50%;
     }
   }
   @include m(primary) {
@@ -39,6 +47,15 @@
     &:hover {
       opacity: 0.8;
     }
+    @include when(plain) {
+      color: var(--lh-primary-color);
+      background-color: var(--lh-primary-color_is-plain);
+    }
+    @include when(circle) {
+      height: var(--lh-default-height);
+      width: var(--lh-default-height);
+      border-radius: 50%;
+    }
   }
   @include m(danger) {
     border-color: var(--lh-danger-color);
@@ -46,6 +63,15 @@
     background-color: var(--lh-danger-color);
     &:hover {
       opacity: 0.8;
+    }
+    @include when(plain) {
+      color: var(--lh-danger-color);
+      background-color: var(--lh-danger-color_is-plain);
+    }
+    @include when(circle) {
+      height: var(--lh-default-height);
+      width: var(--lh-default-height);
+      border-radius: 50%;
     }
   }
   @include m(success) {
@@ -55,6 +81,15 @@
     &:hover {
       opacity: 0.8;
     }
+    @include when(plain) {
+      color: var(--lh-success-color);
+      background-color: var(--lh-success-color_is-plain);
+    }
+    @include when(circle) {
+      height: var(--lh-default-height);
+      width: var(--lh-default-height);
+      border-radius: 50%;
+    }
   }
   @include m(warning) {
     border-color: var(--lh-warning-color);
@@ -62,6 +97,15 @@
     background-color: var(--lh-warning-color);
     &:hover {
       opacity: 0.8;
+    }
+    @include when(plain) {
+      color: var(--lh-warning-color);
+      background-color: var(--lh-warning-color_is-plain);
+    }
+    @include when(circle) {
+      height: var(--lh-default-height);
+      width: var(--lh-default-height);
+      border-radius: 50%;
     }
   }
   @include m(info) {
@@ -71,16 +115,35 @@
     &:hover {
       opacity: 0.8;
     }
+    @include when(plain) {
+      color: var(--lh-info-color);
+      background-color: var(--lh-info-color_is-plain);
+    }
+    @include when(circle) {
+      height: var(--lh-default-height);
+      width: var(--lh-default-height);
+      border-radius: 50%;
+    }
   }
   @include m(large) {
     height: var(--lh-large-height);
     padding: 8px 16px;
     font-size: 18px;
+    @include when(circle) {
+      height: var(--lh-large-height);
+      width: var(--lh-large-height);
+      border-radius: 50%;
+    }
   }
   @include m(small) {
     height: var(--lh-small-height);
     padding: 8px 14px;
     font-size: 14px;
+    @include when(circle) {
+      height: var(--lh-small-height);
+      width: var(--lh-small-height);
+      border-radius: 50%;
+    }
   }
   @include when(round) {
     border-radius: 32px;

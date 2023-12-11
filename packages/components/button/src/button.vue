@@ -2,7 +2,7 @@
  * @Author: lh
  * @Date: 2023-12-11 11:33:29
  * @LastEditors: lh
- * @LastEditTime: 2023-12-11 16:57:23
+ * @LastEditTime: 2023-12-11 17:46:59
  * @Description: 
 -->
 <template>
@@ -11,6 +11,8 @@
       bem.b(),
       modifierType ? bem.m(modifierType) : '',
       isRound ? bem.is('round', true) : '',
+      isPlain ? bem.is('plain', true) : '',
+      isCircle ? bem.is('circle', true) : '',
       modifierSize ? bem.m(modifierSize) : ''
     ]"
   >
@@ -58,6 +60,10 @@ const modifierType = computed(() => {
 
 // button is round
 const isRound = computed(() => props.round)
+// button is plain
+const isPlain = computed(() => props.plain)
+// button is circle
+const isCircle = computed(() => props.circle)
 console.log(props)
 defineOptions({
   name: 'LhButton'
