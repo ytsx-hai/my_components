@@ -1,0 +1,88 @@
+@use './mixins/reset.scss' as *;
+@use './mixins/var.scss' as *;
+@use './mixins/mixins.scss' as *;
+
+@include b(button) {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  height: 32px;
+  white-space: nowrap;
+  cursor: pointer;
+  color: var(--lh-button-text-color);
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.1s;
+  font-weight: var(--lh-button-font-weight);
+  user-select: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  background-color: var(--lh-button-bg-color);
+  border: var(--lh-border);
+  border-color: var(--lh-button-border-color);
+  padding: 8px 15px;
+  font-size: var(--lh-font-size-base);
+  border-radius: var(--lh-border-radius-base);
+  @include m(default) {
+    &:hover {
+      opacity: 0.8;
+      border: 1px solid var(--lh-primary-color);
+      color: var(--lh-primary-color);
+    }
+  }
+  @include m(primary) {
+    border-color: var(--lh-primary-color);
+    color: #fff;
+    background-color: var(--lh-primary-color);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include m(danger) {
+    border-color: var(--lh-danger-color);
+    color: #fff;
+    background-color: var(--lh-danger-color);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include m(success) {
+    border-color: var(--lh-success-color);
+    color: #fff;
+    background-color: var(--lh-success-color);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include m(warning) {
+    border-color: var(--lh-warning-color);
+    color: #fff;
+    background-color: var(--lh-warning-color);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include m(info) {
+    border-color: var(--lh-info-color);
+    color: #fff;
+    background-color: var(--lh-info-color);
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  @include m(large) {
+    height: var(--lh-large-height);
+    padding: 8px 16px;
+    font-size: 18px;
+  }
+  @include m(small) {
+    height: var(--lh-small-height);
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+  @include when(round) {
+    border-radius: 32px;
+  }
+}
