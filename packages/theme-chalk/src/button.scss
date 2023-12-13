@@ -56,6 +56,14 @@
       width: var(--lh-default-height);
       border-radius: 50%;
     }
+    @include when(loading) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+    @include when(disabled) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
   }
   @include m(danger) {
     border-color: var(--lh-danger-color);
@@ -72,6 +80,14 @@
       height: var(--lh-default-height);
       width: var(--lh-default-height);
       border-radius: 50%;
+    }
+    @include when(loading) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+    @include when(disabled) {
+      opacity: 0.8;
+      cursor: not-allowed;
     }
   }
   @include m(success) {
@@ -90,6 +106,14 @@
       width: var(--lh-default-height);
       border-radius: 50%;
     }
+    @include when(loading) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+    @include when(disabled) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
   }
   @include m(warning) {
     border-color: var(--lh-warning-color);
@@ -107,6 +131,14 @@
       width: var(--lh-default-height);
       border-radius: 50%;
     }
+    @include when(loading) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+    @include when(disabled) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
   }
   @include m(info) {
     border-color: var(--lh-info-color);
@@ -123,6 +155,14 @@
       height: var(--lh-default-height);
       width: var(--lh-default-height);
       border-radius: 50%;
+    }
+    @include when(loading) {
+      opacity: 0.8;
+      cursor: not-allowed;
+    }
+    @include when(disabled) {
+      opacity: 0.8;
+      cursor: not-allowed;
     }
   }
   @include m(large) {

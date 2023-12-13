@@ -1,3 +1,10 @@
+/*
+ * @Author: lh
+ * @Date: 2023-12-11 08:35:51
+ * @LastEditors: lh
+ * @LastEditTime: 2023-12-13 11:20:06
+ * @Description:
+ */
 module.exports = {
   singleQuote: true, //使用单引号
   semi: false, //使用分号

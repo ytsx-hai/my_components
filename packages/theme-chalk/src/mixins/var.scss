@@ -19,3 +19,26 @@
   --lh-button-border-color: #dcdfe6;
   --lh-border-radius-base: 4px;
 }
+
+.is-loading {
+  opacity: 0.8;
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: spin 1s linear infinite;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
