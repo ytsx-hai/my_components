@@ -2,11 +2,11 @@
  * @Author: lh
  * @Date: 2023-12-11 08:35:51
  * @LastEditors: lh
- * @LastEditTime: 2023-12-11 09:10:18
+ * @LastEditTime: 2023-12-14 16:40:57
  * @Description: 
 -->
 <template>
-  <i :class="bem.b()" :style="style">
+  <i :class="bem.b()" :style="style" v-bind="$attrs">
     <slot></slot>
   </i>
 </template>

@@ -186,6 +186,6 @@
     }
   }
   @include when(round) {
-    border-radius: 32px;
+    border-radius: var(--lh-large-height);
   }
 }
