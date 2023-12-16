@@ -1,0 +1,30 @@
+@use './mixins/var.scss' as *;
+@use './mixins/mixins.scss' as *;
+
+@include b(text) {
+  font-size: var(--lh-font-size-base);
+  color: var(--lh-base-text-color);
+  @include m(default) {
+  }
+  @include m(primary) {
+    color: var(--lh-primary-color);
+  }
+  @include m(success) {
+    color: var(--lh-success-color);
+  }
+  @include m(danger) {
+    color: var(--lh-danger-color);
+  }
+  @include m(info) {
+    color: var(--lh-info-color);
+  }
+  @include m(warning) {
+    color: var(--lh-warning-color);
+  }
+  @include m(large) {
+    font-size: var(--lh-font-large);
+  }
+  @include m(small) {
+    font-size: var(--lh-font-small);
+  }
+}
