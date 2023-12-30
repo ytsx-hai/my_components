@@ -1,17 +1,21 @@
 :root {
+  //五款主题色
   --lh-primary-color: #3497a0;
   --lh-danger-color: #ff7887;
   --lh-success-color: #24aa0d;
   --lh-warning-color: #eacb71;
   --lh-info-color: #828282;
+  //五款镂空色
   --lh-primary-color_is-plain: #f5feff;
   --lh-danger-color_is-plain: #fdf7f8;
   --lh-success-color_is-plain: #f6fdf4;
   --lh-warning-color_is-plain: #fffcf5;
   --lh-info-color_is-plain: #f4f4f5;
+  //不同size的盒子高度
   --lh-large-height: 38px;
   --lh-default-height: 32px;
   --lh-small-height: 26px;
+  //不同size字体大小
   --lh-font-large: 18px;
   --lh-font-size-base: 14px;
   --lh-font-small: 10px;
@@ -24,6 +28,7 @@
   --lh-border-radius-base: 4px;
 }
 
+//button在加载中
 .is-loading {
   opacity: 0.8;
   &::before {

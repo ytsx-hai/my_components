@@ -9,7 +9,9 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 import router from './router/index'
+import lhComponents from '../../packages/components'
 
 const app = createApp(App)
+app.use(lhComponents)
 app.use(router)
 app.mount('#app')
