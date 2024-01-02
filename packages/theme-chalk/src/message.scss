@@ -1,0 +1,72 @@
+@use './mixins/var.scss' as *;
+@use './mixins/mixins.scss' as *;
+
+@include b(message) {
+  position: absolute;
+  z-index: var(--lh-message-zIndex);
+  padding: 0 24px;
+  height: 36px;
+  background-color: red;
+  top: 14px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  align-items: center;
+  background-color: var(--lh-message-info-bgc);
+  color: var(--lh-base-text-color);
+  border-radius: var(--lh-border-radius-base);
+  animation: fadeIn 0.4s ease-in-out;
+  @include e(content) {
+    margin: 0 8px;
+  }
+  @include e(fadeOut) {
+    animation: fadeOut 0.4s ease-in-out forwards;
+  }
+  @include m(success) {
+    color: var(--lh-success-color);
+    background-color: var(--lh-success-color_is-plain);
+  }
+  @include m(danger) {
+    color: var(--lh-danger-color);
+    background-color: var(--lh-danger-color_is-plain);
+  }
+  @include m(warning) {
+    color: var(--lh-warning-color);
+    background-color: var(--lh-warning-color_is-plain);
+  }
+  @include m(info) {
+    color: var(--lh-info-color);
+    background-color: var(--lh-info-color_is-plain);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+    transform: translate(-50%, -14px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 14px);
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, 14px);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -14px);
+  }
+}
+/*
+animation-name：指定动画的名称。
+animation-duration：指定动画的持续时间ms。
+animation-timing-function：指定动画的时间函数，控制动画的速度如何变化。linear、ease、ease-in、ease-out、ease-in-out
+animation-delay：指定动画的延迟时间。
+animation-iteration-count：指定动画的重复次数。
+animation-direction：指定动画的播放方向。
+animation-fill-mode：指定动画在非动画播放时间里应如何应用。
+animation-play-state：指定动画的播放状态。
+*/

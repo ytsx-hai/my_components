@@ -1,11 +1,19 @@
+/*
+ * @Author: lh
+ * @Date: 2024-01-02 13:47:08
+ * @LastEditors: lh
+ * @LastEditTime: 2024-01-02 14:42:05
+ * @Description:
+ */
 import type { Plugin, App } from 'vue'
-import Message from './src/message'
+import lhMessage from './src/message'
+import '@lh-vui/theme-chalk/src/message.scss'
 
 //只是为了兼容vue2
-;(Message as Plugin).install = function (app: App) {
-  app.config.globalProperties.$message = Message
+;(lhMessage as Plugin).install = function (app: App) {
+  app.config.globalProperties.$message = lhMessage
 }
 
-export { Message }
+export { lhMessage }
 
-export default Message
+export default lhMessage

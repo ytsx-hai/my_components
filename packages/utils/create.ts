@@ -2,7 +2,7 @@
  * @Author: lh
  * @Date: 2023-12-11 08:35:51
  * @LastEditors: lh
- * @LastEditTime: 2023-12-11 09:28:02
+ * @LastEditTime: 2024-01-02 15:14:21
  * @Description:
  */
 // block 代码块  element 元素  modifier 装饰  state状态
@@ -23,7 +23,7 @@ function _bem(
     prefixName += `-${blockSuffix}`
   }
   if (element) {
-    prefixName += `__${element}`
+    prefixName += `_${element}`
   }
   if (modifier) {
     prefixName += `--${modifier}`

@@ -8,4 +8,16 @@
   height: 1em;
   vertical-align: middle;
   color: var(--lh-base-text-color);
+  @include m(success) {
+    color: var(--lh-success-color);
+  }
+  @include m(danger) {
+    color: var(--lh-danger-color);
+  }
+  @include m(warning) {
+    color: var(--lh-warning-color);
+  }
+  @include m(info) {
+    color: var(--lh-info-color);
+  }
 }
