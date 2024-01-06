@@ -4,7 +4,7 @@
 @include b(message) {
   position: absolute;
   z-index: var(--lh-message-zIndex);
-  padding: 0 24px;
+  padding: 0 18px;
   height: 36px;
   background-color: red;
   top: 14px;
@@ -16,6 +16,18 @@
   color: var(--lh-base-text-color);
   border-radius: var(--lh-border-radius-base);
   animation: fadeIn 0.4s ease-in-out;
+  .message-num {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: inline-block;
+    content: '';
+    height: 18px;
+    line-height: 18px;
+    padding: 0 6px;
+    border-radius: 18px;
+    font-size: 10px;
+  }
   @include e(content) {
     margin: 0 8px;
   }
@@ -26,17 +38,33 @@
     color: var(--lh-success-color);
     background-color: var(--lh-success-color_is-plain);
   }
+  .message-num-success {
+    background-color: var(--lh-success-color);
+    color: var(--lh-success-color_is-plain);
+  }
   @include m(danger) {
     color: var(--lh-danger-color);
     background-color: var(--lh-danger-color_is-plain);
+  }
+  .message-num-danger {
+    background-color: var(--lh-danger-color);
+    color: var(--lh-danger-color_is-plain);
   }
   @include m(warning) {
     color: var(--lh-warning-color);
     background-color: var(--lh-warning-color_is-plain);
   }
+  .message-num-warning {
+    background-color: var(--lh-warning-color);
+    color: var(--lh-warning-color_is-plain);
+  }
   @include m(info) {
     color: var(--lh-info-color);
     background-color: var(--lh-info-color_is-plain);
+  }
+  .message-num-info {
+    background-color: var(--lh-info-color);
+    color: var(--lh-info-color_is-plain);
   }
 }
 

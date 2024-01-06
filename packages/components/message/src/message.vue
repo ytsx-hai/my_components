@@ -7,6 +7,7 @@
 -->
 <template>
   <div
+    :id="id"
     :class="[
       bem.b(),
       showFadeOut ? bem.e('fadeOut') : '',
@@ -26,6 +27,9 @@
       ><Warning
     /></lhIcon>
     <span :class="[bem.e('content')]">{{ message }}</span>
+    <span v-if="num > 1" :class="[`message-num`, `message-num-${type}`]">{{
+      num
+    }}</span>
   </div>
 </template>
 <script lang="ts" setup>
@@ -40,10 +44,11 @@ import {
 } from '@vicons/ionicons5'
 import { ref } from 'vue'
 const props = defineProps({
-  id: { type: Number, default: 0 },
+  id: { type: String, default: '' },
   message: { type: String, default: '' },
   type: { type: String, default: 'info' },
-  duration: { type: Number, default: 3000 }
+  duration: { type: Number, default: 3000 },
+  num: { type: Number, default: 1 }
 })
 
 const bem = createNamespace('message')
@@ -52,12 +57,8 @@ const type = useModifierType(props)
 
 //多久后弹窗消失
 const showFadeOut = ref(false)
-let timeOut: number
 function messageDuration() {
-  if (timeOut) {
-    clearTimeout(timeOut)
-  }
-  timeOut = setTimeout(() => {
+  setTimeout(() => {
     showFadeOut.value = true
   }, props.duration)
 }

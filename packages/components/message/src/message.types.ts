@@ -11,6 +11,7 @@ export interface IMessageOptions {
   message?: string
   duration?: number
   type?: typeEnum
+  num: number
 }
 
 export type IMessage = IMessageOptions | string
